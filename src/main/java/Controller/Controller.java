@@ -81,11 +81,17 @@ public class Controller {
                 result = model.convertList(resu[0]);
                 if(resu[1]!=null){
                 String remainder = model.convertList(resu[1]);
-                view.setRemainderPolynomial(remainder);}
+                view.setRemainderPolynomial(remainder);}else
+                    view.setRemainderPolynomial("0");
             } else {
                 result = model.convertList(res);
             }
 
+
+            if(res.getMonomialsList().isEmpty())
+                view.setResultPolynomial("0");
+            else
+                view.setResultPolynomial(result);
             view.setResultPolynomial(result);
             model.printPolynomials();
             System.out.println(result);

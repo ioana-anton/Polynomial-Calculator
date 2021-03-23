@@ -36,6 +36,7 @@ public class Model {
     public ArrayList<String> getGroups(String s) { //separa in grupuri de termeni un polinom string
 
         s=s.replaceAll("X","x");
+        s=s.replaceAll(" ","");
 
         ArrayList<String> groups = new ArrayList<>();
 

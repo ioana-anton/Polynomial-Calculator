@@ -14,7 +14,7 @@ public class View extends JFrame {
 
     private JTextField firstPolynomial = new JTextField();
     private JTextField secondPolynomial = new JTextField();
-    private JTextField resultPolynomial = new JTextField();
+    private JTextField resultPolynomial = new JTextField("Result");
     private JTextField remainderPolynomial = new JTextField();
     private JButton addition = new JButton("+");
     private JButton subtraction = new JButton("-");
@@ -32,35 +32,52 @@ public class View extends JFrame {
         remainderPolynomial.setEditable(false);
 
         JPanel opButtons = new JPanel();
+        JPanel centerP=new JPanel();
+        JPanel leftP=new JPanel();
+        JPanel rightP=new JPanel();
 
-        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
-        mainPanel.setPreferredSize(new Dimension(300, 405));
+        centerP.setLayout(new BoxLayout(centerP, BoxLayout.Y_AXIS));
+        centerP.setPreferredSize(new Dimension(300, 405));
+        centerP.setBackground(new Color(52, 158, 235));
 
-        opButtons.setLayout(new FlowLayout());
-        opButtons.setPreferredSize(new Dimension(70, 30));
+        opButtons.setLayout(new GridLayout(2,3));
+        opButtons.setPreferredSize(new Dimension(100, 100));
 
         firstPolynomial.setPreferredSize(new Dimension(150, 40));
         secondPolynomial.setPreferredSize(new Dimension(150, 40));
         resultPolynomial.setPreferredSize(new Dimension(150,40));
         remainderPolynomial.setPreferredSize(new Dimension(150,40));
 
+        mainPanel.setBackground(new Color(43, 144, 217));
+        rightP.setBackground(new Color(43, 144, 217));
+        leftP.setBackground(new Color(43, 144, 217));
+
+        /*
         addition.setPreferredSize(new Dimension(40, 30));
         subtraction.setPreferredSize(new Dimension(40, 30));
         multiplication.setPreferredSize(new Dimension(40,30));
         derivation.setPreferredSize(new Dimension(40,30));
         integration.setPreferredSize(new Dimension(40,30));
         division.setPreferredSize(new Dimension(40,30));
-        confirm.setPreferredSize(new Dimension(40, 30));
+        confirm.setPreferredSize(new Dimension(40, 30));*/
 
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(firstPolynomial);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(secondPolynomial);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(resultPolynomial);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(remainderPolynomial);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
+        opButtons.add(addition);
+        opButtons.add(subtraction);
+        opButtons.add(integration);
+        opButtons.add(division);
+        opButtons.add(derivation);
+        opButtons.add(multiplication);
+
+        centerP.add(Box.createRigidArea(new Dimension(150, 10)));
+        centerP.add(firstPolynomial);
+        centerP.add(Box.createRigidArea(new Dimension(150, 10)));
+        centerP.add(secondPolynomial);
+        centerP.add(Box.createRigidArea(new Dimension(150, 10)));
+        centerP.add(resultPolynomial);
+        centerP.add(Box.createRigidArea(new Dimension(150, 10)));
+        centerP.add(remainderPolynomial);
+        centerP.add(Box.createRigidArea(new Dimension(150, 10)));
+        /*
         mainPanel.add(addition);
         mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
         mainPanel.add(subtraction);
@@ -71,10 +88,15 @@ public class View extends JFrame {
         mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
         mainPanel.add(integration);
         mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(division);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 5)));
-        mainPanel.add(confirm);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
+        mainPanel.add(division);*/
+        centerP.add(opButtons);
+        centerP.add(Box.createRigidArea(new Dimension(150, 5)));
+        centerP.add(confirm);
+        centerP.add(Box.createRigidArea(new Dimension(150, 10)));
+
+        mainPanel.add(rightP);
+        mainPanel.add(centerP);
+        mainPanel.add(leftP);
 
         this.setContentPane(mainPanel);
         this.pack();

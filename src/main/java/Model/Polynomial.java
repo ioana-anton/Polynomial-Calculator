@@ -192,8 +192,8 @@ public class Polynomial {
             result = new Monomial(it.getDegree() + 1, (double) it.getCoef() / (it.getDegree() + 1));
             c.monomialsList.add(result);
         }
+
         if (c.monomialsList.isEmpty() == false) {
-            c = removeNullCoef(c);
             c.monomialsList.sort(comp);
         }
         return c;
