@@ -52,14 +52,6 @@ public class View extends JFrame {
         rightP.setBackground(new Color(43, 144, 217));
         leftP.setBackground(new Color(43, 144, 217));
 
-        /*
-        addition.setPreferredSize(new Dimension(40, 30));
-        subtraction.setPreferredSize(new Dimension(40, 30));
-        multiplication.setPreferredSize(new Dimension(40,30));
-        derivation.setPreferredSize(new Dimension(40,30));
-        integration.setPreferredSize(new Dimension(40,30));
-        division.setPreferredSize(new Dimension(40,30));
-        confirm.setPreferredSize(new Dimension(40, 30));*/
 
         opButtons.add(addition);
         opButtons.add(subtraction);
@@ -77,18 +69,6 @@ public class View extends JFrame {
         centerP.add(Box.createRigidArea(new Dimension(150, 10)));
         centerP.add(remainderPolynomial);
         centerP.add(Box.createRigidArea(new Dimension(150, 10)));
-        /*
-        mainPanel.add(addition);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(subtraction);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(multiplication);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(derivation);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(integration);
-        mainPanel.add(Box.createRigidArea(new Dimension(150, 10)));
-        mainPanel.add(division);*/
         centerP.add(opButtons);
         centerP.add(Box.createRigidArea(new Dimension(150, 5)));
         centerP.add(confirm);

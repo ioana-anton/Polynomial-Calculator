@@ -12,10 +12,6 @@ public class Polynomial {
         monomialsList = m;
     }
 
-   /* public void setMonomialsList(ArrayList<Monomial> s) {
-        monomialsList = s;
-    }*/
-
     public ArrayList<Monomial> getMonomialsList() {
         return monomialsList;
     }
